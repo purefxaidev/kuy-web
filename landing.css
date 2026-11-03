@@ -28,14 +28,14 @@ h1 em,h2 em{font-style:normal;background:linear-gradient(100deg,var(--g),var(--g
 .btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold) 45%,#d99b1e);color:#2a1d00;box-shadow:0 12px 30px -8px #f5c54299,inset 0 1px 0 #fff8}
 .btn.ghost{color:var(--tx);border:1px solid #ffffff40;background:#ffffff0d}.btn:hover{transform:translateY(-2px)}
 .stage{position:relative;height:min(86vw,520px);perspective:900px}
-.orb3d{position:absolute;inset:8%;transform-style:preserve-3d;transition:transform .25s ease-out}
+.orb3d{position:absolute;inset:8%;transition:transform .25s ease-out}
 .sphere{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff9 0,#9ff0c1 8%,var(--g) 30%,var(--e) 52%,var(--dg) 78%),var(--dg);box-shadow:0 40px 90px -20px #2ecc7188,inset -30px -40px 80px #031b12,inset 20px 20px 60px #ffffff40,0 0 0 1px #ffffff22;animation:breathe 4s ease-in-out infinite}
-.sphere::after{content:"";position:absolute;inset:-6%;border-radius:50%;background:conic-gradient(from 0deg,transparent,#f5c54255,transparent 40%,#2ecc7155,transparent 75%);filter:blur(14px);animation:spin 9s linear infinite;z-index:-1}
-.char{position:absolute;left:50%;top:50%;width:46%;height:auto;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-50%) translateZ(70px);border-radius:50%;box-shadow:0 18px 40px #000a,0 0 0 3px #f5c54266;animation:bob 5s ease-in-out infinite}
+.sphere::after{content:"";position:absolute;inset:-6%;border-radius:50%;background:conic-gradient(from 0deg,transparent,#f5c54255,transparent 40%,#2ecc7155,transparent 75%);-webkit-mask:radial-gradient(closest-side,transparent 78%,#000 86%,transparent 100%);mask:radial-gradient(closest-side,transparent 78%,#000 86%,transparent 100%);animation:spin 9s linear infinite;z-index:-1}
+.char{position:absolute;left:50%;top:50%;width:46%;height:auto;aspect-ratio:1;object-fit:cover;transform:translate(-50%,-50%);border-radius:50%;border:3px solid #f5c54266;z-index:2;box-shadow:0 18px 40px #000a;animation:bob 5s ease-in-out infinite}
 .ring{position:absolute;inset:0;border-radius:50%;border:2px solid #f5c54266;transform:rotateX(72deg);animation:spinx 14s linear infinite}
 .r2{inset:6%;border-color:#2ecc7177;transform:rotateY(70deg) rotateX(20deg);animation-duration:18s;animation-direction:reverse}.r3{inset:-4%;border:1px dashed #ffffff30;animation-duration:30s}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes spinx{to{transform:rotateX(72deg) rotateZ(360deg)}}
-@keyframes breathe{50%{transform:scale(1.04)}}@keyframes bob{50%{transform:translate(-50%,-54%) translateZ(70px)}}
+@keyframes breathe{50%{transform:scale(1.04)}}@keyframes bob{50%{transform:translate(-50%,-54%)}}
 .bubble{position:absolute;padding:10px 14px;font-size:.92rem;border-radius:18px 18px 18px 4px;max-width:62%;animation:bob2 6s ease-in-out infinite}
 .q1{top:6%;left:0}.q2{bottom:10%;right:0;border-radius:18px 18px 4px 18px;animation-delay:-3s}.gold-t{color:var(--gold2)}
 @keyframes bob2{50%{transform:translateY(-10px)}}
