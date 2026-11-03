@@ -1,0 +1,13 @@
+(()=>{const h=document.documentElement,b=document.getElementById("lang");
+const set=l=>{h.dataset.lang=l;h.lang=l;b.textContent=l==="th"?"EN":"ไทย";try{localStorage.kuyLang=l}catch(e){}};
+let s;try{s=localStorage.kuyLang}catch(e){}set(s||"th");
+b.onclick=()=>set(h.dataset.lang==="th"?"en":"th");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+const o=document.querySelector(".orb3d"),st=document.getElementById("stage");let raf=0;
+const tilt=(x,y)=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>o.style.transform=`rotateY(${x*18}deg) rotateX(${-y*14}deg)`)};
+addEventListener("pointermove",e=>tilt(e.clientX/innerWidth-.5,e.clientY/innerHeight-.5),{passive:true});
+addEventListener("deviceorientation",e=>e.gamma!=null&&tilt(e.gamma/90,(e.beta-45)/90),{passive:true});
+addEventListener("scroll",()=>{const y=scrollY;if(y<900)st.style.transform=`translateY(${y*.15}px)`},{passive:true});
+})();
