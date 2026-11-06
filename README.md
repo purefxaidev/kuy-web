@@ -18,4 +18,4 @@ Static landing page only (no app source, no backend). Live: https://purefxaidev.
 Donations are voluntary support — **not an investment**, with no returns or rewards.
 การบริจาคเป็นการสนับสนุนโดยสมัครใจ **ไม่ใช่การลงทุน** และไม่มีผลตอบแทนใด ๆ
 
-Donation page with QR: https://purefxaidev.github.io/driftwatch-video/
+Support PureFxAi — USDT ERC20: `0x920deab53daf94ca2030ad5ceec2265bf5686941` (QR in-app / wallet).
